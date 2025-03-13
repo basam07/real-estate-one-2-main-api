@@ -1,6 +1,5 @@
 import { fetchTagline, updateTagline, deleteTagline } from "../../../../../server/home-title/taglines.js";
 import { handleError, handleSuccess } from "../../../../../lib/response.utils";
-// import { UpdateTaglineValidator } from "./update-home_title.validator.js";
 
 export const dynamic = 'force-dynamic';
 

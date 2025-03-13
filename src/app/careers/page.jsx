@@ -14,13 +14,13 @@ import { fetchAllExpectations } from '../../../server/expections/expectations';
 import { fetchAllCoreValues } from '../../../server/our-core-value/our_core_value';
 import { fetchAllApplies } from '../../../server/apply/apply';
 
-const page = async () => {
-  const careerDescriptions = await getAllCareer();
-  const careerRealinvte = await getAllCareerRealinvte();
-  const experience = await getAllExperience();
-  const expectations = await getAllExpectation();
-  const coreValues = await getAllCoreValues();
-  const applies = await getAllApply();
+const page = async ({params}) => {
+  const careerDescriptions = await getAllCareer(params.slug);
+  const careerRealinvte = await getAllCareerRealinvte(params.slug);
+  const experience = await getAllExperience(params.slug);
+  const expectations = await getAllExpectation(params.slug);
+  const coreValues = await getAllCoreValues(params.slug);
+  const applies = await getAllApply(params.slug);
   // console.log(expectations);
 
   return (
@@ -39,27 +39,27 @@ const page = async () => {
 
 export default page;
 
-async function getAllCareer() {
-  return fetchAllCareerDescriptions();
+async function getAllCareer(slug) {
+  return fetchAllCareerDescriptions(slug);
 }
 
-async function getAllCareerRealinvte() {
-  return fetchAllCareerRealinvte();
+async function getAllCareerRealinvte(slug) {
+  return fetchAllCareerRealinvte(slug);
 }
 
 
-async function getAllExperience() {
-  return fetchAllexperience();
+async function getAllExperience(slug) {
+  return fetchAllexperience(slug);
 }
 
-async function getAllExpectation() {
-  return fetchAllExpectations();
+async function getAllExpectation(slug) {
+  return fetchAllExpectations(slug);
 }
 
-async function getAllCoreValues() {
-  return fetchAllCoreValues();
+async function getAllCoreValues(slug) {
+  return fetchAllCoreValues(slug);
 }
 
-async function getAllApply() {
-  return fetchAllApplies();
+async function getAllApply(slug) {
+  return fetchAllApplies(slug);
 }
