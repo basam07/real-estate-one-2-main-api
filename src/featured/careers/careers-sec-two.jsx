@@ -1,7 +1,5 @@
-import { fetchAllCareerDescriptions } from "../../../server/career-description/career_descriptions";
-
-export default async function CareersSecTwo() {
-  const careerDescriptions = await getAllCareer();
+export default async function CareersSecTwo({careerDescriptions}) {
+  
   return (
     <div className=" items-center text-center justify-center">
       <div className="my-24 text-[20px] max-w-[753px] mx-auto">
@@ -15,8 +13,4 @@ export default async function CareersSecTwo() {
       </div>
     </div>
   );
-}
-
-async function getAllCareer() {
-  return fetchAllCareerDescriptions();
 }

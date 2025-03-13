@@ -1,8 +1,6 @@
 import React from "react";
-import { fetchAllApplies } from "../../../server/apply/apply";
 
-const CareerSecEight = async () => {
-  const applies = await getAllApply();
+const CareerSecEight = async ({applies}) => {
 
   return (
     <div
@@ -36,6 +34,3 @@ const CareerSecEight = async () => {
 
 export default CareerSecEight;
 
-async function getAllApply() {
-  return fetchAllApplies();
-}

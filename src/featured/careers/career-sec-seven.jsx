@@ -1,8 +1,6 @@
 import React from "react";
-import { fetchAllExpectations } from "../../../server/expections/expectations";
 
-const CarrerSecSeven = async () => {
-  const expectations = await getAllExpectation();
+const CarrerSecSeven = async ({expectations}) => {
 
   return (
     <div
@@ -26,7 +24,3 @@ const CarrerSecSeven = async () => {
 };
 
 export default CarrerSecSeven;
-
-async function getAllExpectation() {
-  return fetchAllExpectations();
-}

@@ -2,8 +2,7 @@ import React from 'react';
 import { coreicon } from '@/data/about/aboutdata';
 import { fetchAllCoreValues } from '../../../server/our-core-value/our_core_value';
 
-const AboutSecThree = async () => {
-  const coreValues = await getAllCoreValues();
+const AboutSecThree = async ({coreValues}) => {
 
   return (
     <div style={{ backgroundColor: "var(--global-raisin-black-color)" }} className="flex flex-col items-center p-12">
@@ -26,7 +25,3 @@ const AboutSecThree = async () => {
 };
 
 export default AboutSecThree;
-
-async function getAllCoreValues() {
-  return fetchAllCoreValues();
-}

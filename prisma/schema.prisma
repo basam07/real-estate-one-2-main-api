@@ -39,6 +39,7 @@ model Blogs {
 
 model Taglines {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   tagline String
   subTagline String
   createdAt DateTime @default(now())
@@ -49,6 +50,7 @@ model Taglines {
 
 model OurTeam {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   description String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -59,6 +61,7 @@ model OurTeam {
 
 model OurServices {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   description String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -69,6 +72,7 @@ model OurServices {
 
 model HomeAbout {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   createdAt DateTime @default(now())
@@ -79,6 +83,7 @@ model HomeAbout {
 
 model AboutUs {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   createdAt DateTime @default(now())
@@ -89,6 +94,7 @@ model AboutUs {
 
 model OurCoreValue {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   createdAt DateTime @default(now())  
@@ -100,6 +106,7 @@ model OurCoreValue {
 
 model OurMission {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   createdAt DateTime @default(now())
@@ -110,6 +117,7 @@ model OurMission {
 
 model Team {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   name String
   designation String
   createdAt DateTime @default(now())
@@ -120,6 +128,7 @@ model Team {
 
 model Insights {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   createdAt DateTime @default(now())
@@ -131,6 +140,7 @@ model Insights {
 
 model Services {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   description String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -141,6 +151,7 @@ model Services {
 
 model Apply {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   email String
@@ -152,6 +163,7 @@ model Apply {
 
 model Expectation {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   title String
   description String
   createdAt DateTime @default(now())
@@ -163,6 +175,7 @@ model Expectation {
 
 model Experience {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   experTitle String
   experDescription String
   createdAt DateTime @default(now())
@@ -173,6 +186,7 @@ model Experience {
 
 model CareerDescription {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   careerDescription String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -183,6 +197,7 @@ model CareerDescription {
 
 model CareerRealinvte {
   id String @id @default(cuid()) @map("_id")
+  slug String @unique
   realinvteTitle String
   realinvteDescription String
   createdAt DateTime @default(now())

@@ -1,8 +1,4 @@
-import { fetchAllexperience } from "../../../server/experience/experiences";
-
-export default async function CareersSecFour() {
-  const experience = await getAllExperience();
-  
+export default async function CareersSecFour({ experience }) {
   return (
     <div className="w-5/12 mx-auto my-24 flex flex-col items-center">
       <div className="flex flex-wrap justify-center gap-[40px] w-full">
@@ -29,8 +25,4 @@ export default async function CareersSecFour() {
       </div>
     </div>
   );
-}
-
-async function getAllExperience() {
-  return fetchAllexperience();
 }

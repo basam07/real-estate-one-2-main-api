@@ -1,8 +1,8 @@
 import { prisma } from "../../lib/database";
 
-export const fetchCareerDescriptionById = async (id) => {
-   return prisma.careerDescription.findUnique({
-         where: { id }
+export const fetchCareerDescriptionById = async (slug) => {
+   return prisma.careerDescription.findFirst({
+         where: { slug }
    });
 }
 

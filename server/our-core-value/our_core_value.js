@@ -1,8 +1,8 @@
 import { prisma } from "../../lib/database";
 
-export const fetchCoreValueById = async (id) => {
+export const fetchCoreValueById = async (slug) => {
    return prisma.ourCoreValue.findUnique({
-         where: { id }
+         where: { slug }
    });
 }
 

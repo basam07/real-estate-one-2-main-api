@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Client from '../../../public/careers/client-1.png';
-import { realInvite } from "@/data/careers/careers";
-import { fetchAllCareerRealinvte } from "../../../server/career-realivte/career_realinvte";
 
 
-export default async function CareersSecThree() {
-    const careerRealinvte = await getAllCareerRealinvte();
+export default async function CareersSecThree({careerRealinvte}) {
     return (
         <div className='w-9/12 mx-auto my-24'>
             <div className='grid grid-cols-6 gap-[40px]'>
@@ -28,8 +25,4 @@ export default async function CareersSecThree() {
             </div>
         </div>
     );
-}
-
-async function getAllCareerRealinvte() {
-  return fetchAllCareerRealinvte();
 }

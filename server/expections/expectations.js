@@ -1,8 +1,8 @@
 import { prisma } from "../../lib/database";
 
-export const fetchExpectationById = async (id) => {
-   return prisma.expectation.findUnique({
-         where: { id }
+export const fetchExpectationById = async (slug) => {
+   return prisma.expectation.findFirst({
+         where: { slug }
    });
 }
 
