@@ -1,5 +1,5 @@
 import React from 'react'
-import { createServics } from '../../../../../../server/services/services'
+import { createService } from '../../../../../../server/services/services'
 import FormTwo from '@/featured/Form/insights/form-two'
 
 
@@ -13,5 +13,5 @@ import FormTwo from '@/featured/Form/insights/form-two'
  }
 
 async function getServices(slug){
-    return createServics(slug);
+    return createService(slug);
 }

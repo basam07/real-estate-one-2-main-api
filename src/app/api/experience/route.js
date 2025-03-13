@@ -1,4 +1,4 @@
-import {createExperience, fetchAllExperiences} from "../../../../server/experience/experiences.js";
+import {createExperience, fetchAllexperience} from "../../../../server/experience/experiences.js";
 import {CreateExperienceValidator} from "./create-experience.validator.js";
 import {handleError, handleSuccess} from "../../../../lib/response.utils";
 
@@ -22,7 +22,7 @@ export async function POST(request) {
 
 export async function GET(request) {
     try {
-        const response = await fetchAllExperiences();
+        const response = await fetchAllexperience();
         return handleSuccess(response);
     } catch (err) {
         return handleError(err);

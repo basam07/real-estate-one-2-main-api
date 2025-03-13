@@ -1,7 +1,7 @@
 import {PropertiesValidator} from "./properties.validator";
 import {handleError, handleSuccess} from "../../../../lib/response.utils";
-import {createProperty} from "../../../../server/properties/properties";
-import {fetchProperties} from "@/app/properties/[slug]/page";
+import {createProperty, fetchProperties} from "../../../../server/properties/properties";
+// import {fetchProperties} from "@/app/properties/[slug]/page";
 
 export const dynamic = 'force-dynamic';
 
