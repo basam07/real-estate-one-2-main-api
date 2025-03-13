@@ -5,12 +5,14 @@ import AboutSecThree from '@/featured/about/about-sec-three'
 import AboutSecFour from '@/featured/about/about-sec-four'
 import AboutSecFive from '@/featured/about/about-sec-five'
 import HomeSecSix from "@/featured/home/home-section-six";
-const page = () => {
+import { fetchAllCoreValues } from '../../../server/our-core-value/our_core_value'
+const page = async () => {
+  const coreValues = await getAllCoreValues();
   return (
     <div>
         <Abouthero/>
         <AboutSecTwo/>
-        <AboutSecThree/>
+        <AboutSecThree coreValues={coreValues}/>
         <AboutSecFour/>
         <AboutSecFive/>
         <HomeSecSix/>
@@ -19,3 +21,7 @@ const page = () => {
 }
 
 export default page
+
+async function getAllCoreValues() {
+  return fetchAllCoreValues();
+}

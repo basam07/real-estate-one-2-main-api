@@ -1,6 +1,5 @@
 import React from 'react';
 import { coreicon } from '@/data/about/aboutdata';
-import { fetchAllCoreValues } from '../../../server/our-core-value/our_core_value';
 
 const AboutSecThree = async ({coreValues}) => {
 
