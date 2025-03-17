@@ -14,7 +14,7 @@ const FormBlogPage = ({ formData = null }) => {
     try {
       const response = await axios.post("/api/blogs", data);
       alert("Property created successfully.");
-      await router.replace("/admin/blogs");
+      router.replace("/admin/blogs");
     } catch (error) {
       console.error("Failed to create property:", error);
       alert("Failed to create property.");
