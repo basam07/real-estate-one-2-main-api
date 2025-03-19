@@ -58,9 +58,9 @@
 }
   .highlightgrid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     padding: 60px;
-    gap: 30px;
+    gap: 50px;
   }
   @media(max-width:786px){
     .section-three{

@@ -1,18 +1,21 @@
 import React from 'react'
 import Button from '@/components/button/button';
 import Link from 'next/link';
+import PropertiesHero from './properties-hero';
 
 const PropertiesSecTwo = ({property}) => {
   // Array of highlight items
+  // console.log('property::::',property);
 
 
   const highlights = [
-    { label: 'Price', value: `Guide Price ${property.price}` },
+    { label: 'Price', value: `Guide Price ${property?.price}` },
     { label: 'Rooms', value: `${property.bedrooms} Beds • ${property.bathrooms} Baths` },
   ];
 
   return (
     <div>
+      <PropertiesHero property={property} />
       <div className='flex justify-center text-5xl mt-12 px-4'>
         <h2>
         {property.Title}
