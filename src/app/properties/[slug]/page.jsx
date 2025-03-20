@@ -4,11 +4,10 @@ import PropertiesSecTwo from '@/featured/properties/properties-sec-two'
 import { fetchProperty } from '../../../../server/properties/properties';
 
 const Page = async ({ params }) => {
-    if (!params || !params.slug) {
-        return <div>Loading...</div>; // Handle the case where params are not yet available
-    }
 
-    const property = await getProperties(params.slug);
+    // console.log('param slug data',params)
+    const { slug } = await params;
+    const property = await getProperties(slug);
 
     return (
         <div>
